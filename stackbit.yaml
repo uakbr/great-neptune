@@ -1,0 +1,46 @@
+stackbitVersion: ~0.3.0
+ssgName: nextjs
+nodeVersion: '12'
+publishDir: out
+pagesDir: ''
+models:
+  doc:
+    type: page
+    label: Doc
+    folder: docs
+    match: '**/*'
+    exclude:
+      - index.mdx
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section
+        label: Section
+      - type: string
+        name: slug
+        label: Slug
+      - type: number
+        name: order
+        label: Order
+        subtype: int
+  doc_1:
+    type: page
+    label: Doc 1
+    folder: docs
+    match:
+      - index.mdx
+    fields:
+      - type: string
+        name: slug
+        label: Slug
+      - type: string
+        name: redirect
+        label: Redirect
+  partial:
+    type: page
+    label: Partial
+    folder: partials
+    match: '*'
+    fields: []
